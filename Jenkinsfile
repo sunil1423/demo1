@@ -3,16 +3,17 @@ pipeline{
     stages{
         stage('Building'){
             steps{
-                bat 'mvn install'
+                sh 'mvn install'
                 
             }
         }
        
         stage('execute'){
             steps{
-                bat 'java -jar target/MavenProject-v1.jar'
+                sh 'java -jar target/MavenProject-v1.jar'
             }
         }
         
     }
 }
+
